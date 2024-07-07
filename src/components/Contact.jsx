@@ -49,12 +49,15 @@ function Contact() {
   const submitHandler = async (event) => {
     console.log(email, name);
     event.preventDefault();
-    const response = await fetch("https://email-backend-r8co.onrender.com/sendemail", {
+    const response = await fetch("https://email-backend-r8co.onrender.com/sendemail", 
+    // const response = await fetch("http://localhost:3000/sendemail", 
+      
+      {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ name, email,message }),
+      body: JSON.stringify({ name, email,message,to:"ishnoorsinghsethi@gmail.com" }),
     });
     const data = await response.json();
     console.log(data.messageId)  };
