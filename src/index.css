@@ -1,0 +1,12 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+[data-scroll-container] {
+  touch-action: none;
+}
+@media screen and (max-width: 480px) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
